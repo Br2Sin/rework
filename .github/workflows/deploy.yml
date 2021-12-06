@@ -18,7 +18,7 @@ jobs:
           username: ${{secrets.SSH_USERNAME}}
           script: |
             cd /home
-            git clone https://github.com/VictorKudrin.git
+            git clone https://github.com/VictorKudrin/rework.git
             cd rework
       - name: Deployed successfully
         run: |
