@@ -21,6 +21,5 @@ jobs:
             git pull
             cd rework
       - name: Deployed successfully
-        working-directory: /home/rework
-        run: |
+        script: |
           python3 manage.py runserver
