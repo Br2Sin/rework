@@ -18,8 +18,9 @@ jobs:
           username: ${{secrets.SSH_USERNAME}}
           script: |
             cd /home
-            git clone https://github.com/VictorKudrin/rework.git
+            git pull
             cd rework
       - name: Deployed successfully
+        working-directory: /home/rework
         run: |
           python3 manage.py runserver
