@@ -19,7 +19,8 @@ jobs:
           script: |
             mkdir test
             cd test
-            git clone https://github.com/VictorKudrin/rework.git
+            git pull
+            cd rework
       - name: Deployed successfully
         run: |
-          echo Deployed!!
+          python manage.py runserver
