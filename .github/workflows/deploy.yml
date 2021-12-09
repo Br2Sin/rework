@@ -18,9 +18,9 @@ jobs:
           username: ${{secrets.SSH_USERNAME}}
           script: |
             cd /home
-            git pull
+            git clone https://github.com/VictorKudrin/rework.git
       - name: Deployed successfully
         run: |
           import os
           print(os.environ['PATH'])
-        shell: python3
+        shell: python
