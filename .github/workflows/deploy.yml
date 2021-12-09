@@ -11,7 +11,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps: 
-      - uses: appleboy/ssh-action@v0.1.2
+      - uses: actions/checkout@v2
+      - name: Fetch history, because Heroku deploy fails otherwise.
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - uses: appleboy/ssh-action@master
         with:
           host: ${{secrets.SSH_HOST}}
           key: ${{secrets.SSH_KEY}} 
@@ -24,5 +29,5 @@ jobs:
           #import os
           #print(os.environ['PATH'])
           working-directory: /home/rework
-          python manage.py runserver
+          python3 manage.py runserver
         shell: python
