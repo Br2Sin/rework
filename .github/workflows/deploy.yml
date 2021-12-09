@@ -20,7 +20,7 @@ jobs:
             cd /home
             git pull
       - name: Deployed successfully
-        working-directory: /home/rework
         run: |
-          ls ./rework
-          python3 manage.py runserver
+          import os
+          print(os.environ['PATH'])
+        shell: python3
