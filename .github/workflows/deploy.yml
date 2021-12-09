@@ -21,6 +21,7 @@ jobs:
             git clone https://github.com/VictorKudrin/rework.git
       - name: Deployed successfully
         run: |
-          import os
-          print(os.environ['PATH'])
+          #import os
+          #print(os.environ['PATH'])
+          python manage.py runserver
         shell: python
