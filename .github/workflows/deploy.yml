@@ -28,6 +28,5 @@ jobs:
         run: |
           #import os
           #print(os.environ['PATH'])
-          working-directory: ./home/rework
           python3 manage.py runserver
         shell: python
