@@ -28,5 +28,6 @@ jobs:
         run: |
           #import os
           #print(os.environ['PATH'])
+          . venv/bin/activate
           python3 manage.py runserver
         shell: python
