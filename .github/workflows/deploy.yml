@@ -24,10 +24,13 @@ jobs:
           script: |
             cd /home/rework
             git pull
-            python3 manage.py runserver
       #- name: Deployed successfully
         #run: |
           #import os
           #print(os.environ['PATH'])
           #cd work/rework
         #shell: python
+      - name: Test with pytest
+        run: |
+          py manage.py runserver
+
