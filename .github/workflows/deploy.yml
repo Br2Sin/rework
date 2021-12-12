@@ -32,5 +32,9 @@ jobs:
         #shell: python
       - name: Test with pytest
         run: |
-          py manage.py runserver
+          python3 -m venv venv
+          .venv/bin/activate
+          .venv/bin/activate
+          cd /home/rework
+          python manage.py test
 
